@@ -96,8 +96,8 @@ while not done: #done이 False를 유지하는 동안 계속 실행, not False =
     
     screen.fill(BLACK) # 스크린의 배경색을 채워넣기
     screen.blit(background, (0, 0))
-    elapsed_timer=(pygame.time.get_ticks()-start_ticks/1000)#경과시간(ms)을 1000으로 나누어 초 단위로 표시
-    timer=game_font.render((elapsed_timer), True,(255,255,255))#타이머 그리기 출력할 글자,True,글자색상
+    elapsed_timer=(pygame.time.get_ticks()-start_ticks)/1000#경과시간(ms)을 1000으로 나누어 초 단위로 표시
+    timer=game_font.render(str(int(elapsed_timer)), True,(255,255,255))#타이머 그리기 출력할 글자,True,글자색상
 
     screen.blit(timer,(10,10))
      
